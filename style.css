@@ -1,0 +1,169 @@
+/* Сброс стилей */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Основные настройки */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
+}
+
+/* Шапка */
+
+header{
+    background:#1a1a1a;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#4caf50;
+}
+
+/* Главный экран */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    padding:50px;
+    flex-wrap:wrap;
+}
+
+.hero img{
+    width:450px;
+    max-width:100%;
+    border-radius:15px;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h2{
+    margin-bottom:20px;
+    font-size:42px;
+}
+
+.hero-text p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+button{
+    background:#4caf50;
+    border:none;
+    color:white;
+    padding:15px 30px;
+    cursor:pointer;
+    border-radius:10px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Секции */
+
+section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+section h2{
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* Карточки */
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:#222;
+    padding:25px;
+    border-radius:15px;
+    width:300px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Галерея */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Подвал */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#1a1a1a;
+}
+
+/* Адаптация под телефон */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h2{
+        font-size:30px;
+    }
+
+}
